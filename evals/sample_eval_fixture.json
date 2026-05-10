@@ -1,0 +1,31 @@
+{
+  "name": "sample-graph-rag-eval",
+  "documents": [
+    {
+      "source_id": "doc-1",
+      "text": "Alice from Acme Corp worked with River County on flood sensors. The project focused on flood resilience and public warning systems."
+    },
+    {
+      "source_id": "doc-2",
+      "text": "Bob manages Solar Lab, which supplies Metro Grid. The energy work focuses on grid operations and backup power planning."
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "local-1",
+      "question": "What did Alice do in River County?",
+      "expected_answer": "Alice worked with Acme Corp on flood sensors in River County.",
+      "mode": "local",
+      "top_k": 2,
+      "max_hops": 1,
+      "max_chunks": 3
+    },
+    {
+      "case_id": "global-1",
+      "question": "What are the main themes across the documents?",
+      "expected_answer": "The main themes are flood resilience work and grid operations.",
+      "mode": "global",
+      "top_k": 2
+    }
+  ]
+}
